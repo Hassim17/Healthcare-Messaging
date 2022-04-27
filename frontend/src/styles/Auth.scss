@@ -1,0 +1,82 @@
+.signup-form {
+  font-family: "Nunito Sans";
+
+  .form-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .label {
+      color: white;
+      width: 95px;
+      margin: auto;
+    }
+
+    .input {
+      background-color: white;
+    }
+    :hover {
+      box-shadow: 1px 1px 12px rgb(117, 117, 117);
+    }
+
+    .input-password {
+      background-color: white;
+      padding-right: 50px;
+    }
+
+    .input-file {
+      width: 100%;
+      border: none;
+      font-family: "Nunito Sans";
+      color: grey;
+      background-color: white;
+      border-radius: 7px;
+    }
+
+    .show-hide {
+      font-size: 1.5rem;
+      cursor: pointer;
+      background-color: #0677e0c4;
+      color: white;
+      font-weight: 500;
+      padding: 2px 4px;
+      border-radius: 7px;
+      width: 35px;
+      transform: ease in color;
+      transition-duration: 0.2s;
+    }
+
+    .show-hide:hover {
+      background-color: #007fd4;
+    }
+  }
+
+  .signup-btn,
+  .login-btn {
+    font-family: "Russo One";
+    letter-spacing: 2px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 740px) {
+  .form-control {
+    .input,
+    .input-password {
+      height: 30px;
+      font-size: 14px;
+      padding: 0 10px;
+    }
+
+    .label {
+      font-size: 13px;
+    }
+
+    .show-hide {
+      font-size: 1rem;
+      position: relative;
+      bottom: 5px;
+      width: 2rem !important;
+    }
+  }
+}

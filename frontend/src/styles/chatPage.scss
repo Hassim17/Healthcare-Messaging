@@ -1,0 +1,48 @@
+.chatPage {
+  width: 100%;
+  background-color: #555;
+  color: white;
+
+  .sideDrawer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    border: none;
+    width: 100%;
+    padding: 5px 10px;
+
+    .chatPage-title {
+      font-size: 27px;
+      font-family: "Kanit", sans-serif;
+      font-weight: 400;
+    }
+
+    .fa-bell {
+      font-size: 22px;
+      padding: 5px 10px 0;
+    }
+  }
+
+  .chatPage-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 91.5vh;
+  }
+}
+
+@media (max-width: 740px) {
+  .chatPage {
+    .sideDrawer {
+      .chatPage-title {
+        font-size: 20px;
+      }
+
+      .fa-bell {
+        font-size: 18px;
+        margin: 10px 0px;
+      }
+    }
+  }
+}

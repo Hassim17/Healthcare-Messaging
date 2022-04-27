@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Russo+One&family=Work+Sans:wght@300;600&display=swap");
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  background: url(./background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.tab-header {
+  font-family: "Russo One", sans-serif;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 740px) {
+  .App {
+    background: url(./background-mobile.jpg);
+    background-size: cover;
+  }
+
+  .homePage-container {
+    width: 90% !important;
+  }
+
+  .homePage-container-title {
+    font-size: 1.5rem !important;
+  }
+}
