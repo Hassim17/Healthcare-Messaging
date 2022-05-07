@@ -51,6 +51,10 @@ const SideDrawer = () => {
     history.push("/");
   };
 
+  const handleSearchPage = () => {
+    history.push("/news");
+  };
+
   const toast = useToast();
 
   const handleSearch = async () => {
@@ -132,6 +136,10 @@ const SideDrawer = () => {
         </Tooltip>
         <h2 className="chatPage-title">Healthcare-Messaging</h2>
         <div>
+          <Button
+            className="searchPage-button"
+            onClick={handleSearchPage}
+          ></Button>
           <Menu>
             <MenuButton p={1}>
               <NotificationBadge

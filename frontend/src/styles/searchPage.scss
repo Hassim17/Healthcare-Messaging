@@ -1,0 +1,18 @@
+.searchPage {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  padding: 20px auto 10px;
+  font-family: "Montserrat";
+
+  .newsCard {
+    margin: 20px;
+    width: 90%;
+    background-color: #ccc;
+
+    .newsTitle {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}

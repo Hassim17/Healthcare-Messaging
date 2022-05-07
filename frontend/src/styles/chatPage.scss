@@ -16,6 +16,15 @@
       font-size: 27px;
       font-family: "Kanit", sans-serif;
       font-weight: 400;
+      color: white;
+    }
+
+    .searchPage-button {
+      height: 50px;
+      width: 50px;
+      background-image: url("../searchIcon.png");
+      background-size: cover;
+      background-color: #333;
     }
 
     .fa-bell {
