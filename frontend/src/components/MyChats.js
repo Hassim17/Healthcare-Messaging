@@ -2,7 +2,7 @@ import { Box, Button, Stack, Text, useToast } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { ChatState } from "../Context/chatProvider";
 import axios from "axios";
-import { getSender } from "../config/ChatLogics";
+import { API_ENDPOINT, getSender } from "../config/ChatLogics";
 import ChatLoading from "./ChatLoading";
 import GroupChatModal from "./miscellaneous/GroupChatModal";
 
@@ -20,7 +20,7 @@ const MyChats = ({ fetchAgain }) => {
         },
       };
 
-      const { data } = await axios.get("/api/chat", config);
+      const { data } = await axios.get(get(`${API_ENDPOINT}/api/chat`, config);
       setChats(data);
     } catch (error) {}
   };
