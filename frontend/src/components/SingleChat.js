@@ -8,7 +8,7 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
-import { getSender, getSenderFull } from "../config/ChatLogics";
+import { API_ENDPOINT, getSender, getSenderFull } from "../config/ChatLogics";
 import { ChatState } from "../Context/chatProvider";
 import ProfileModel from "./miscellaneous/ProfileModel";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
@@ -19,8 +19,8 @@ import io from "socket.io-client";
 import Lottie from "react-lottie";
 import animationData from "../Animation/typing.json";
 
-// const ENDPOINT = "https://healthcare-messaging.herokuapp.com/";
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://healthcare-messaging.onrender.com";
+// const ENDPOINT = "http://localhost:5000";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -58,7 +58,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `/api/message/${selectedChat._id}`,
+        `${API_ENDPOINT}/api/message/${selectedChat._id}`,
         config
       );
 
@@ -120,7 +120,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          "/api/message",
+          `${API_ENDPOINT}/api/message`,
           {
             content: newMessage,
             chatId: selectedChat._id,
