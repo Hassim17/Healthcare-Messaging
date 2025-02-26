@@ -8,6 +8,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 
 import "../../styles/Auth.scss";
+import { API_ENDPOINT } from "../../config/ChatLogics";
 
 const Signup = () => {
   const [name, setName] = useState();
@@ -100,7 +101,7 @@ const Signup = () => {
       };
 
       const { data } = await axios.post(
-        "/api/user",
+        `${API_ENDPOINT}/api/user`,
         { name, email, password, pic },
         config
       );
