@@ -16,7 +16,7 @@ const SearchPage = () => {
   useEffect(() => {
     const loadNews = async () => {
       const response = await axios.get(
-        "http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=06e7cbae93394815b707a8a9b1ee2d3a"
+        "https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=06e7cbae93394815b707a8a9b1ee2d3a"
       );
       setNews(response.data.articles);
     };
@@ -27,7 +27,12 @@ const SearchPage = () => {
 
   return (
     <div className="searchPage">
-      <NewsCard news={news[0]} />
+      {
+        !!news.length &&
+        news.map((news, index) => (
+          <NewsCard key={index} news={news} />
+        ))
+      }
     </div>
   );
 };
